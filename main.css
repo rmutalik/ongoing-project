@@ -26,6 +26,12 @@ ul
 li 
 {
   float: right;
+  transition: transform 2s;
+}
+
+li:hover
+{
+	transform: rotate(360deg);
 }
 
 li a 
