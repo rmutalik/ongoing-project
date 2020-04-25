@@ -18,12 +18,15 @@
 			{
 				window.history.back();
 			}
+
+			/* Cookies */
+			// file:/// protocol does not store cookies
 		</script>
 		
 		<title>Ongoing Project</title>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
 	</head>
-	<body onclick="goBack()" >
+	<body>
 
 		<div id="navbar">
 			<ul>
@@ -34,14 +37,14 @@
 			</ul>
 		</div>
 
-		<video class="center" width="40%" height="40%" loop controls>
-			<source src="./whistling.mp4" type="video/mp4" />
-			Your browser does not support the video tag.
-		</video>
+			<video onclick="goBack()" class="center" width="40%" height="40%" loop controls>
+				<source src="./whistling.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
 
-		<iframe class="center" width="40%" height="40%"  
-			src="https://www.youtube.com/embed/8ti8-vEM3U8?autoplay=1">
-		</iframe>
+			<iframe class="center" width="40%" height="40%"  
+				src="https://www.youtube.com/embed/8ti8-vEM3U8?autoplay=1">
+			</iframe>
 
 		<!-- FIXME: Youtube Playlist -->
 <!-- 		<iframe class="center" width="40%" height="40%"  
