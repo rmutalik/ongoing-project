@@ -5,7 +5,7 @@
 		<title>Register</title>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
 	</head>
-	<body>
+	<body onclick="window.location.replace('http://www.rohanmutalik.com')">
 
 		<!-- FIXME: Don't repeat yourself...server-side includes to only create navbar once -->
 		<div id="navbar">
@@ -36,7 +36,7 @@
 				<label for="confirm_pw">Confirm Password:</label><br/>
 				<input type="password" id="confirm_pw" name="confirm_pw" /><br/>
 
-				<input type="submit" value="Submit" />
+				<input type="submit" value="Submit" onclick="alert('History Length = ' + history.length);" />
 
 			</form>
 		</div>
