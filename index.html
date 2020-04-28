@@ -22,13 +22,13 @@
 			/* Cookies */
 			// file:/// protocol does not store cookies
 
-			function show_video()
+			function show_element(clicked_id)
 			{
-				document.getElementById('myVideo').style.visibility = 'visible';
+				document.getElementById(clicked_id).style.visibility = 'visible';
 			}
-			function hide_video()
+			function hide_element(clicked_id)
 			{
-				document.getElementById('myVideo').style.visibility = 'hidden';
+				document.getElementById(clicked_id).style.visibility = 'hidden';
 			}			
 
 		</script>
@@ -38,6 +38,7 @@
 	</head>
 	<body>
 
+		<!-- <div id="navbar" onmouseover="show_element(this.id)" onmouseout="hide_element(this.id)"> -->
 		<div id="navbar">
 			<ul>
 				<li><a href="./index.html">Home</a></li>
@@ -47,7 +48,7 @@
 			</ul>
 		</div>
 
-			<video id="myVideo" onmouseover="hide_video()" onmouseout="show_video()" 
+			<video id="myVideo" onmouseover="hide_element(this.id)" onmouseout="show_element(this.id)" 
 				onclick="goBack()" class="center" width="40%" height="40%" loop controls>
 				<source src="./whistling.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
