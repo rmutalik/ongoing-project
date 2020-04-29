@@ -13,25 +13,6 @@
 			ga('send', 'pageview');
 		</script> -->
 		<!-- End Google Analytics -->
-		<script>
-			function goBack() 
-			{
-				window.history.back();
-			}
-
-			/* Cookies */
-			// file:/// protocol does not store cookies
-
-			function show_element(clicked_id)
-			{
-				document.getElementById(clicked_id).style.visibility = 'visible';
-			}
-			function hide_element(clicked_id)
-			{
-				document.getElementById(clicked_id).style.visibility = 'hidden';
-			}			
-
-		</script>
 		
 		<title>Ongoing Project</title>
 		<link rel="stylesheet" type="text/css" href="./main.css" />
@@ -54,7 +35,7 @@
 				Your browser does not support the video tag.
 			</video>
 
-			<iframe class="center" width="40%" height="40%"  
+			<iframe id="video2" class="center" width="40%" height="40%"  
 				src="https://www.youtube.com/embed/8ti8-vEM3U8?autoplay=1">
 			</iframe>
 
@@ -63,6 +44,39 @@
 			src="https://www.youtube.com/embed?listType=playlist
 				&list=8ti8-vEM3U8,Kus-YGkFR8w">
 		</iframe>	 -->	
+
+		<script>
+			
+			let dblclick_event = document.getElementById("navbar");
+			dblclick_event.addEventListener("dblclick", split_view);
+
+			function goBack() 
+			{
+				window.history.back();
+			}
+
+			/* Cookies */
+			// file:/// protocol does not store cookies
+
+			/* Events */
+			function show_element(clicked_id)
+			{
+				document.getElementById(clicked_id).style.visibility = 'visible';
+			}
+			function hide_element(clicked_id)
+			{
+				document.getElementById(clicked_id).style.visibility = 'hidden';
+			}	
+
+			function split_view()
+			{
+				alert("Function entered!");
+/*				let elem = document.createElement("video");
+				let video = document.getElementById("video2");
+				video.appendChild(elem);*/
+			}		
+
+		</script>		
 
 	</body>
 
