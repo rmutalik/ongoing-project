@@ -27,3 +27,9 @@ for file in os.listdir(csv_folder):
            continue
         else:
             df_dict[name] = pd.read_csv(physical_file)
+
+
+# Exploratory Data Analysis
+df_admissions = df_dict['ADMISSIONS']
+df_admissions.head()
+df_admissions.describe()
