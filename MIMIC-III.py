@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# ## Import Libraries
+
+# In[1]:
+
+
 # Import libraries
 import os, os.path
 import shutil
@@ -5,6 +13,11 @@ import shutil
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
+# ## Load Data
+
+# In[9]:
 
 
 # Load Data
@@ -21,15 +34,51 @@ for file in os.listdir(csv_folder):
         MAX_FILE_SIZE = 100000000
         physical_file = os.path.join(csv_folder, file)
         statinfo = os.stat(physical_file)
-        print(statinfo)            
+#         print(statinfo)            
         if statinfo.st_size > MAX_FILE_SIZE:
-           print(file, statinfo.st_size)
-           continue
+            standardized_size = statinfo.st_size / (10**6)
+            print(file, standardized_size, "MB")
+            continue
         else:
             df_dict[name] = pd.read_csv(physical_file)
 
 
-# Exploratory Data Analysis
+# In[10]:
+
+
+df_dict.keys()
+
+
+# In[11]:
+
+
+from sys import getsizeof
+
+print(getsizeof(df_dict), "bytes")
+
+
+# ## Explore Data
+
+# In[12]:
+
+
 df_admissions = df_dict['ADMISSIONS']
+
+
+# In[13]:
+
+
 df_admissions.head()
+
+
+# In[14]:
+
+
 df_admissions.describe()
+
+
+# In[23]:
+
+
+df_admissions.isna().sum()
+
